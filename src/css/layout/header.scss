@@ -1,0 +1,85 @@
+.header {
+  @include display-flex();
+  flex-direction: column;
+}
+
+.nav-header {
+  @include display-flex();
+  width: 100%;
+  background-color: $primary;
+  letter-spacing: 2px;
+  color: $secondary;
+  font-family: $mplus;
+  justify-content: center;
+  text-transform: uppercase;
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+    flex-grow: 1;
+    margin-left: 5rem;
+  }
+
+  ul {
+    @include display-flex();
+    color: $secondary;
+    margin-right: 10rem;
+    font-size: 1.5em;
+
+    li {
+      margin-right: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $secondary;
+    }
+  }
+}
+
+.header-container {
+  font-family: $mplus;
+  @include display-flex();
+  height: 375px;
+  @include box-shadow();
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  img{
+      height: 100%;
+      margin-right: 2rem;
+  }
+}
+
+.info {
+  width: 50%;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-right: 10rem;
+  @include display-flex();
+  flex-direction: column;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $primary;
+  }
+
+  button {
+    text-transform: uppercase;
+    margin-top: 2em;
+    color: $secondary;
+    background-color: $primary;
+    border: none;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $hover;
+    }
+  }
+}

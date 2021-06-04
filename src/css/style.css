@@ -407,5 +407,87 @@ li {
 
 /**colors**/
 /**fonts**/
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #7e2e84;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.nav-header h1 {
+  font-weight: 400;
+  font-size: 2.5em;
+  flex-grow: 1;
+  margin-left: 5rem;
+}
+.nav-header ul {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-right: 10rem;
+  font-size: 1.5em;
+}
+.nav-header ul li {
+  margin-right: 2rem;
+}
+.nav-header ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-container {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  display: flex;
+  align-items: center;
+  height: 375px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.header-container img {
+  height: 100%;
+  margin-right: 2rem;
+}
+
+.info {
+  width: 50%;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-right: 10rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.info h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7e2e84;
+}
+.info button {
+  text-transform: uppercase;
+  margin-top: 2em;
+  color: #fff;
+  background-color: #7e2e84;
+  border: none;
+  padding: 1rem;
+  width: 250px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.info button:hover {
+  background-color: #65256a;
+}
 
 /*# sourceMappingURL=style.css.map */
