@@ -8,10 +8,11 @@
   width: 100%;
   background-color: $primary;
   letter-spacing: 2px;
-  color: $secondary;
+  color: $font;
   font-family: $mplus;
   justify-content: center;
   text-transform: uppercase;
+  margin-bottom: 1px;
 
   h1 {
     font-weight: 400;
@@ -22,7 +23,7 @@
 
   ul {
     @include display-flex();
-    color: $secondary;
+    color: $font;
     margin-right: 10rem;
     font-size: 1.5em;
 
@@ -32,7 +33,12 @@
 
     a {
       text-decoration: none;
+      color: $font;
+      transition: 0.3s;
+
+      &:hover{
       color: $secondary;
+      }
     }
   }
 }
@@ -44,10 +50,11 @@
   @include box-shadow();
   justify-content: space-between;
   padding: 1rem 2rem;
-
-  img{
-      height: 100%;
-      margin-right: 2rem;
+  background-color: $primary;
+  color: $font;
+  img {
+    height: 100%;
+    margin-right: 2rem;
   }
 }
 
@@ -64,20 +71,20 @@
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $primary;
+    color: $font;
   }
 
   button {
     text-transform: uppercase;
     margin-top: 2em;
-    color: $secondary;
-    background-color: $primary;
+    color: $font;
+    background-color: $secondary;
     border: none;
     padding: 1rem;
     width: 250px;
     border-radius: 50px;
     transition: 0.3s;
-
+    @include box-shadow();
     &:hover {
       background-color: $hover;
     }

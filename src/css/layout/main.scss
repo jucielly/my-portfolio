@@ -1,0 +1,144 @@
+.main-container {
+  @include display-flex();
+  flex-direction: column;
+}
+
+.section {
+  h3 {
+    font-family: $mplus;
+    margin: 2.5rem;
+    text-align: center;
+    font-size: 2em;
+    color: $primary;
+    text-transform: uppercase;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+.about-section {
+  p {
+    margin: 2.2rem;
+  }
+}
+
+.skills-section {
+  @include display-flex();
+  flex-direction: column;
+}
+
+.skills-container {
+  @include display-flex();
+  flex-wrap: wrap;
+  justify-content: center;
+  text-transform: uppercase;
+
+  li {
+    text-align: center;
+    flex: 0 0 33%;
+    padding: 0.7rem 1rem;
+  }
+
+  i {
+    font-size: 1.5em;
+    padding: 00.5rem;
+  }
+
+  .icon{
+    width: 25px;
+    height: 25px;
+  }
+
+  .fa-js {
+    color: #f0db4f;
+  }
+
+  .fa-react {
+    color: #61dbfb;
+  }
+
+  .fa-html5 {
+    color: #e44d26;
+  }
+
+  .fa-css3-alt {
+    color: #264de4;
+  }
+
+  .fa-node-js {
+    color: #68a063;
+  }
+
+  .fa-sass {
+    color: #cc6699;
+  }
+
+  .fa-database {
+    color: #f6820d;
+  }
+
+  .fa-git-alt {
+    color: #f34f29;
+  }
+
+  .fa-user-edit{
+    color: #de0c4b;
+  }
+}
+
+.projects-container {
+  @include display-flex();
+  flex-wrap: wrap;
+  justify-content: center;
+  div {
+    border-radius: 5px;
+    margin: 1rem;
+    height: 200px;
+    width: 30%;
+    @include box-shadow();
+  }
+}
+
+.footer {
+  font-family: $mplus;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: $font;
+  background-color: $primary;
+
+  h4 {
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 1.5em;
+  }
+
+  .fa-heart {
+    color: $secondary;
+  }
+}
+
+.links-container {
+  @include display-flex();
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    padding: 0.5rem;
+    margin: 0.7rem;
+    font-size: 1.5em;
+    color: $secondary;
+    width: 40%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $font;
+    transition: 0.3s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+  i {
+    margin-right: 1rem;
+  }
+}
