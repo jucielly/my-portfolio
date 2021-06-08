@@ -452,6 +452,7 @@ li {
 }
 .nav-header ul a:hover {
   color: #CC444B;
+  cursor: pointer;
 }
 
 .header-container {
