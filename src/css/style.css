@@ -22,6 +22,7 @@ html {
    */
 body {
   margin: 0;
+  color: #333;
 }
 
 /* HTML5 display definitions
@@ -465,6 +466,8 @@ li {
   padding: 1rem 2rem;
   background-color: #666569;
   color: #fff;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
 }
 .header-container img {
   height: 100%;
@@ -487,9 +490,9 @@ li {
   letter-spacing: 2px;
   color: #fff;
 }
-.info button {
+.info a {
   text-transform: uppercase;
-  margin-top: 2em;
+  margin-top: 1rem;
   color: #fff;
   background-color: #CC444B;
   border: none;
@@ -497,9 +500,10 @@ li {
   width: 250px;
   border-radius: 50px;
   transition: 0.3s;
+  text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
 }
-.info button:hover {
+.info a:hover {
   background-color: #C0353C;
 }
 
@@ -509,14 +513,16 @@ li {
   flex-direction: column;
 }
 
+.section {
+  padding-bottom: 5rem;
+}
 .section h3 {
   font-family: "M PLUS Rounded 1c", sans-serif;
-  margin: 2.5rem;
+  margin-top: 2.5rem;
   text-align: center;
   font-size: 2em;
-  color: #666569;
+  color: #CC444B;
   text-transform: uppercase;
-  border-bottom: 1px solid #666569;
 }
 
 .about-section p {
@@ -524,9 +530,11 @@ li {
 }
 
 .skills-section {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .skills-container {
@@ -582,16 +590,56 @@ li {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 7rem;
 }
-.projects-container div {
-  border-radius: 5px;
+
+.project {
+  border-radius: 10px;
   margin: 1rem;
-  height: 200px;
+  height: 500px;
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.project:hover {
+  cursor: pointer;
+}
+.project h4 {
+  color: #CC444B;
+  margin-top: 1rem;
+  font-size: 1.5em;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+.project img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.project p {
+  padding: 1rem;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.project .link-container {
+  display: flex;
+  align-items: center;
+}
+.project .link-container a {
+  margin: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #333;
+}
+.project .link-container a:hover {
+  color: #CC444B;
+  cursor: pointer;
 }
 
 .footer {
+  border-radius: 10px 10px 0px 0px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   flex-direction: column;
   justify-content: center;
@@ -599,7 +647,7 @@ li {
   color: #fff;
   background-color: #666569;
 }
-.footer h4 {
+.footer h3 {
   text-transform: uppercase;
   padding: 1em;
   font-size: 1.5em;

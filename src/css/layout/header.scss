@@ -36,9 +36,9 @@
       color: $font;
       transition: 0.3s;
 
-      &:hover{
-      color: $secondary;
-      cursor: pointer;
+      &:hover {
+        color: $secondary;
+        cursor: pointer;
       }
     }
   }
@@ -53,6 +53,8 @@
   padding: 1rem 2rem;
   background-color: $primary;
   color: $font;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
   img {
     height: 100%;
     margin-right: 2rem;
@@ -75,9 +77,9 @@
     color: $font;
   }
 
-  button {
+  a {
     text-transform: uppercase;
-    margin-top: 2em;
+    margin-top: 1rem;
     color: $font;
     background-color: $secondary;
     border: none;
@@ -85,6 +87,7 @@
     width: 250px;
     border-radius: 50px;
     transition: 0.3s;
+    text-decoration: none;
     @include box-shadow();
     &:hover {
       background-color: $hover;

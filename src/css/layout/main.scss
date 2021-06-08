@@ -4,14 +4,14 @@
 }
 
 .section {
+  padding-bottom: 5rem;
   h3 {
     font-family: $mplus;
-    margin: 2.5rem;
+    margin-top: 2.5rem;
     text-align: center;
     font-size: 2em;
-    color: $primary;
+    color: $secondary;
     text-transform: uppercase;
-    border-bottom: 1px solid $primary;
   }
 }
 
@@ -22,15 +22,18 @@
 }
 
 .skills-section {
+  @include box-shadow();
   @include display-flex();
   flex-direction: column;
+  border-radius: 10px;
 }
 
-.skills-container {
+.skills-container { 
   @include display-flex();
   flex-wrap: wrap;
   justify-content: center;
   text-transform: uppercase;
+  
 
   li {
     text-align: center;
@@ -43,7 +46,7 @@
     padding: 00.5rem;
   }
 
-  .icon{
+  .icon {
     width: 25px;
     height: 25px;
   }
@@ -80,7 +83,7 @@
     color: #f34f29;
   }
 
-  .fa-user-edit{
+  .fa-user-edit {
     color: #de0c4b;
   }
 }
@@ -89,16 +92,63 @@
   @include display-flex();
   flex-wrap: wrap;
   justify-content: center;
-  div {
-    border-radius: 5px;
-    margin: 1rem;
-    height: 200px;
-    width: 30%;
-    @include box-shadow();
+  padding-bottom: 7rem;
+
+}
+
+.project{
+  border-radius: 10px;
+  margin: 1rem;
+  height: 500px;
+  width: 30%;
+  @include box-shadow();
+  @include display-flex();
+  flex-direction: column;
+  
+
+  &:hover{
+    cursor: pointer;
   }
+  
+  h4{
+    color: $secondary;
+    margin-top:1rem;
+    font-size: 1.5em;
+    font-family: $mplus;
+  }
+  img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+  }
+
+  p{
+    padding: 1rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+
+  .link-container{
+    @include display-flex();
+    a{
+      margin: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      color: #333;
+
+      &:hover{
+      color: $secondary;
+      cursor: pointer;
+      }
+    }
+  }
+
 }
 
 .footer {
+  border-radius: 10px 10px 0px 0px;
   font-family: $mplus;
   flex-direction: column;
   justify-content: center;
@@ -106,7 +156,7 @@
   color: $font;
   background-color: $primary;
 
-  h4 {
+  h3 {
     text-transform: uppercase;
     padding: 1em;
     font-size: 1.5em;
