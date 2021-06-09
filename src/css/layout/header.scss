@@ -1,10 +1,12 @@
 .header {
   @include display-flex();
   flex-direction: column;
+  height: 100vh;
 }
 
 .nav-header {
   @include display-flex();
+  @include box-shadow();
   width: 100%;
   background-color: $primary;
   letter-spacing: 2px;
@@ -12,11 +14,11 @@
   font-family: $mplus;
   justify-content: center;
   text-transform: uppercase;
-  margin-bottom: 1px;
+  position: fixed;
 
   h1 {
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 2.2em;
     flex-grow: 1;
     margin-left: 5rem;
   }
@@ -24,8 +26,8 @@
   ul {
     @include display-flex();
     color: $font;
-    margin-right: 10rem;
-    font-size: 1.5em;
+    margin-right: 5rem;
+    font-size: 1.2em;
 
     li {
       margin-right: 2rem;
@@ -45,23 +47,26 @@
 }
 
 .header-container {
-  font-family: $mplus;
-  @include display-flex();
-  height: 375px;
   @include box-shadow();
+  @include display-flex();
+  font-family: $mplus;
+  height: 375px;
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: $primary;
   color: $font;
   width: 100%;
-  border-radius: 0px 0px 15px 15px;
+  height: 100%;
+  margin-top: 100px;
   img {
+    max-height: 500px;
     height: 100%;
     margin-right: 2rem;
   }
 }
 
 .info {
+  font-size: 1.2em;
   width: 50%;
   margin-top: 1rem;
   margin-left: 5rem;
@@ -78,6 +83,7 @@
   }
 
   a {
+    @include box-shadow();
     text-transform: uppercase;
     margin-top: 1rem;
     color: $font;
@@ -88,9 +94,9 @@
     border-radius: 50px;
     transition: 0.3s;
     text-decoration: none;
-    @include box-shadow();
     &:hover {
       background-color: $hover;
     }
   }
 }
+

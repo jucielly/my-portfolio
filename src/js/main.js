@@ -1,11 +1,13 @@
 const aboutSection = document.querySelector(".about-section");
 const skillsSection = document.querySelector(".skills-section");
 const projectsSection = document.querySelector(".projects-section");
+const experienceSection = document.querySelector(".experience-section")
 const contacts = document.querySelector('.contacts')
 const navAbout = document.querySelector(".nav-about");
 const navSkills = document.querySelector(".nav-skills");
 const navProjects = document.querySelector(".nav-projects");
 const navContacts = document.querySelector(".nav-contacts");
+const navExperience = document.querySelector(".nav-experience")
 
 const handleScroll = (btn, section) => {
     return btn.addEventListener('click', () => section.scrollIntoView({
@@ -17,3 +19,4 @@ handleScroll(navAbout, aboutSection)
 handleScroll(navSkills, skillsSection)
 handleScroll(navProjects, projectsSection)
 handleScroll(navContacts,contacts)
+handleScroll(navExperience, experienceSection)

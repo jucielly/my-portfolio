@@ -1,0 +1,48 @@
+.footer {
+  font-weight: 300;
+  font-family: $mplus;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: $font;
+  
+  background-color: $primary;
+
+  h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 1.5em;
+  }
+
+  .fa-heart {
+    color: $secondary;
+  }
+}
+
+.links-container {
+  @include display-flex();
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+  li {
+    padding: 0.5rem;
+    margin: 0.7rem;
+    font-size: 1.5em;
+    color: $secondary;
+    width: 40%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $font;
+    transition: 0.3s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+  i {
+    margin-right: 1rem;
+  }
+}

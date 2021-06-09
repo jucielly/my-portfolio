@@ -1,39 +1,46 @@
 .main-container {
   @include display-flex();
   flex-direction: column;
+  background-color: #23272a;
 }
 
 .section {
-  padding-bottom: 5rem;
+  font-family: $mplus;
+  width: 100%;
+  @include box-shadow();
   h3 {
+    font-weight: 400;
     font-family: $mplus;
-    margin-top: 2.5rem;
     text-align: center;
     font-size: 2em;
     color: $secondary;
     text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
 }
 
-.about-section {
+.about-container {
+  color: $font;
+  margin-bottom: 10em;
   p {
-    margin: 2.2rem;
+    font-size: 1.5em;
+    padding: 2em 7em 2em 7em;
   }
 }
 
 .skills-section {
-  @include box-shadow();
+  color: $font;
   @include display-flex();
   flex-direction: column;
-  border-radius: 10px;
 }
 
-.skills-container { 
+.skills-container {
   @include display-flex();
   flex-wrap: wrap;
   justify-content: center;
   text-transform: uppercase;
-  
+  margin-bottom: 10em;
 
   li {
     text-align: center;
@@ -88,107 +95,93 @@
   }
 }
 
+.experience-section {
+  color: $font;
+}
+
+.experience {
+  @include display-flex();
+  margin-bottom: 9em;
+  font-size: 1.5em;
+
+  p {
+    width: 50%;
+    padding-right: 2em;
+  }
+
+  .experience-img {
+    width: 50%;
+
+    h4 {
+      font-family: $mplus;
+      font-size: 2em;
+    }
+
+    img {
+      padding-left: 2em;
+      width: 500px;
+      height: 150px;
+    }
+  }
+}
+
 .projects-container {
   @include display-flex();
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 7rem;
-
+  margin-bottom: 7em;
 }
 
-.project{
+.project {
+  text-align: center;
+  @include box-shadow();
   border-radius: 10px;
   margin: 1rem;
   height: 500px;
   width: 30%;
-  @include box-shadow();
   @include display-flex();
   flex-direction: column;
-  
+  background-color: $font;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
-  
-  h4{
+
+  h4 {
+    font-weight: 500;
     color: $secondary;
-    margin-top:1rem;
+    margin-top: 1rem;
     font-size: 1.5em;
     font-family: $mplus;
   }
-  img{
+  img {
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 250px;
     object-fit: cover;
-
   }
 
-  p{
+  p {
     padding: 1rem;
     word-break: break-all;
-    white-space: pre-wrap;
   }
 
-  .link-container{
+  .techs {
+    font-weight: bold;
+  }
+
+  .link-container {
     @include display-flex();
-    a{
+    a {
       margin: 1rem;
       text-decoration: none;
       transition: 0.3s;
       color: #333;
 
-      &:hover{
-      color: $secondary;
-      cursor: pointer;
+      &:hover {
+        color: $secondary;
+        cursor: pointer;
       }
     }
-  }
-
-}
-
-.footer {
-  border-radius: 10px 10px 0px 0px;
-  font-family: $mplus;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: $font;
-  background-color: $primary;
-
-  h3 {
-    text-transform: uppercase;
-    padding: 1em;
-    font-size: 1.5em;
-  }
-
-  .fa-heart {
-    color: $secondary;
-  }
-}
-
-.links-container {
-  @include display-flex();
-  flex-wrap: wrap;
-  justify-content: center;
-  li {
-    padding: 0.5rem;
-    margin: 0.7rem;
-    font-size: 1.5em;
-    color: $secondary;
-    width: 40%;
-  }
-
-  a {
-    text-decoration: none;
-    color: $font;
-    transition: 0.3s;
-
-    &:hover {
-      color: $secondary;
-    }
-  }
-  i {
-    margin-right: 1rem;
   }
 }
