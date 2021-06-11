@@ -9,13 +9,18 @@ const navSkills = document.querySelector(".nav-skills");
 const navProjects = document.querySelector(".nav-projects");
 const navContacts = document.querySelector(".nav-contacts");
 const navExperience = document.querySelector(".nav-experience")
+const menuCheck = document.querySelector("#menu-btn")
 const logo = document.querySelector(".logo")
 
-const handleScroll = (btn, section) => {
-    return btn.addEventListener('click', () => section.scrollIntoView({
-        behavior: "smooth"
-    }))
-}
+const handleScroll = (btn, section) =>
+    btn.addEventListener('click', () => {
+        menuCheck.checked = false
+        section.scrollIntoView({
+            behavior: "smooth"
+        })
+
+    })
+
 
 handleScroll(navAbout, aboutSection)
 handleScroll(navSkills, skillsSection)

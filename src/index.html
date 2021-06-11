@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&family=Roboto:wght@100;300;500&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico"/>
     <script src="https://kit.fontawesome.com/11e9e029cd.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,13 +19,18 @@
     <Header class="header">
         <nav class="nav-header">
             <h1 class="logo">&lt;jucielly dev /&gt;</h1>
-            <ul>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
                 <li><a class="nav-about">sobre</a></li>
                 <li><a class="nav-skills">skills</a></li>
                 <li><a class="nav-experience">experiência</a></li>
                 <li><a class="nav-projects">projetos</a></li>
                 <li><a class="nav-contacts">contato</a></li>
             </ul>
+
         </nav>
 
         <div class="header-container">
@@ -132,7 +138,8 @@
                         <h4>Find My Hero</h4>
                         <p>Front da aplicação construida em React onde você pode criar uma conta, pesquisar e guardar os
                             seus herois e quadrinhos favoritos da Marvel.</p>
-                        <p class="techs">React, Styled components,consumindo a Find my Hero api e utilizando context api.</p>
+                        <p class="techs">React, Styled components,consumindo a Find my Hero api e utilizando context
+                            api.</p>
                         <div class="link-container">
                             <a href="https://github.com/jucielly/find-my-hero" target="blank"><i
                                     class="fab fa-github"></i>

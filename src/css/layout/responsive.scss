@@ -1,0 +1,221 @@
+@media (max-width: 1024px) {
+  .header {
+    width: 100%;
+  }
+
+  .nav-header {
+    h1 {
+      font-size: 1.3em;
+    }
+
+    a {
+      font-size: 0.8em;
+    }
+  }
+
+  .header-container {
+    margin-top: 60px;
+
+    h2 {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
+
+    a {
+      padding: 0.7rem;
+    }
+
+    img {
+      height: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-header {
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      margin: 1rem 0 1rem 0;
+    }
+    ul {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .header-container {
+    justify-content: center;
+    img {
+      display: none;
+    }
+  }
+  .info {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .experience {
+    p {
+      width: 70%;
+      padding-right: 2rem;
+    }
+  }
+
+  .experience-img {
+    width: 30%;
+    img {
+      padding-left: 3.7rem !important;
+      width: 285px !important;
+      height: 240px !important;
+    }
+  }
+
+  .project {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    ul {
+      @include display-flex();
+      flex-direction: column;
+      text-align: center;
+      margin-left: 50px;
+      padding: 0;
+      overflow: hidden;
+      background-color: $primary;
+    }
+
+    li {
+      a {
+        color: $font;
+        display: block;
+        padding: 10px 0px;
+        border-right: 1px solid $primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      padding: 28px 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      user-select: none;
+    }
+
+    .menu-icon .navicon {
+      background: $font;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background 0.2s ease-out;
+      width: 18px;
+
+      &:before,
+      &:after {
+        background: $font;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+    }
+
+    .menu-icon .navicon:before {
+      top: 5px;
+    }
+
+    .menu-icon .navicon:after {
+      top: 0px;
+    }
+
+    .menu-btn {
+      display: none;
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+
+    .menu-btn:checked ~ .menu {
+      max-height: 300px;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+  }
+
+  .about-section {
+    p {
+      font-size: 1.3em;
+      padding: 1em;
+    }
+  }
+
+  .skills-container {
+    li {
+      flex: 0 0 50%;
+    }
+  }
+
+  .experience {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      padding-left: 2rem;
+    }
+    img {
+      padding-right: 2em;
+      padding-left: 0em !important;
+    }
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .links-container {
+      flex-direction: column;
+  li{
+      padding: 0;
+      width: 100%;
+  }
+  }
+}
