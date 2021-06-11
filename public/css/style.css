@@ -676,7 +676,6 @@ li {
 }
 .project p {
   padding: 1rem;
-  word-break: break-all;
 }
 .project .techs {
   font-weight: bold;
